@@ -8,6 +8,8 @@ import SignIn from './loginpage/SignIn';
 import Guest from './loginpage/Guest';
 import Toggle from './loginpage/Toggle';
 import Home from './home';
+import Conference from './conference';
+import Schedule from './components/schedule';
 import Admin from './components/Admin'
 import io from "socket.io-client";
 
@@ -54,11 +56,12 @@ class App extends Component {
                 <div className="App">
 
                     <Map selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket = {this.socket} updateCompare ={this.updateCompare} compareList ={this.state.compareList} email ={this.state.email}/>
-
+                    <Route exact path="/Schedule" component={Schedule} >
+                        </Route>
 
                     <div className="App__Form" >
 
-                        <Route exact path="/" component={SignUp} >
+                        <Route exact path="/" component={SignIn} >
                         </Route>
 
                         <Route exact path="/sign-up" component={SignUp} >
@@ -67,10 +70,11 @@ class App extends Component {
                         </Route>
                         <Route exact path="/Guest" render ={()=><Guest selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState}/>}>
                         </Route>
-                        <Route exact path="/home" render={()=> <Home selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket={this.socket} compareList = {this.state.compareList}/>} >
+                        <Route exact path="/conference" component={Conference}>
+                                {/*render={()=> <Home selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket={this.socket} compareList = {this.state.compareList}/>} >*/}
                         </Route>
-                        <Route exact path="/admin" component={Admin}>
-                        </Route>
+                        {/*<Route exact path="/admin" component={Admin}>*/}
+                        {/*</Route>*/}
                     </div>
                 </div>
             </Router>

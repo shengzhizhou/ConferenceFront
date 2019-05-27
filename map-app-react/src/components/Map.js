@@ -24,11 +24,11 @@ height: ${props => props.height};
 export default class Map extends React.Component{
     constructor (props) {
         super()
-        this.state = {
-            lat: 51.505,
-            lng: -0.09,
-            zoom: 13
-        }
+        // this.state = {
+        //     lat: 51.505,
+        //     lng: -0.09,
+        //     zoom: 13
+        // }
         this.stateStyle = this.stateStyle.bind(this);
         this.precinctStyle = this.precinctStyle.bind(this);
         this.districtStyle = this.districtStyle.bind(this);
@@ -248,21 +248,10 @@ export default class Map extends React.Component{
 
       this.mymap = L.map(this.refs.mymap, {
         zoomControl: false,
-          center:[40.902117,-73.134398]
+          center:[40.902117,-73.127998]
         //... other options
-    }).setView([40.902117,-73.130898], 17);
-      this.popup = L.popup();
-
-      // L.tileLayer('https://api.mapbox.com/styles/v1/ccall/cju4omhh623za1flgiymq3do0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2NhbGwiLCJhIjoiY2p1NG9qemVhMTAxazQ0cDg1NWoweW5kYSJ9.f45ljFqvaHsgWlC1VjJ-Iw', {
-      //     maxZoom: 20,
-      //     minZoom:2,
-      //     id: 'mapbox.streets',
-      //     accessToken: 'pk.eyJ1IjoicWllbiIsImEiOiJjanJ3aWg5ajAwZDVkNDlvOXF6OWh3dGJ3In0.ewZYRX60IgGsmtsGIffdfQ'
-      // }).addTo(this.mymap);
-
-      //https://api.mapbox.com/styles/v1/ccall/cju4omhh623za1flgiymq3do0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2NhbGwiLCJhIjoiY2p1NG9qemVhMTAxazQ0cDg1NWoweW5kYSJ9.f45ljFqvaHsgWlC1VjJ-Iw
-      //https://api.mapbox.com/styles/v1/linzengxian/cju3oaz0b1tcm1fo6enjxem39/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGluemVuZ3hpYW4iLCJhIjoiY2pyd2J0MGx3MGI5aDQzcXJmbmVxYTk1OCJ9.Y-plQvOEnSriRzc9EcxqQA
-
+    }).setView([40.902117,-73.127998], 17);
+      // this.popup = L.popup();
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -270,8 +259,8 @@ export default class Map extends React.Component{
           minZoom:2,
       }).addTo(this.mymap);
 
-      L.marker([40.902117,-73.134398]).addTo(this.mymap)
-          .bindPopup('Conference Place')
+      L.marker([40.902117,-73.127998]).addTo(this.mymap)
+          .bindPopup('Conference List')
           .openPopup();
 
       L.control.zoom({
@@ -492,7 +481,7 @@ export default class Map extends React.Component{
 
   render() {
     return(
-      <div ref = 'mymap' style={{height:"100%",left:"500px", width:"100%",position:"absolute", 'zIndex': 0}}/>
+      <div ref = 'mymap' style={{height:"100%",left:"400px", width:"100%",position:"absolute", 'zIndex': 0}}/>
 
     )
   };

@@ -31,10 +31,10 @@
 
 .App__Form {
   /*border-radius: 25px;*/
-  width: 500px;
+  width: 400px;
   margin: auto;
   height: 100%;
-  background-color: black;
+  /*background-color: black;*/
   padding: 30px 20px;
   position: absolute;
   left: 0px;
@@ -112,13 +112,13 @@
   display: block;
   text-transform: uppercase;
   font-size: .9em;
-  color: white;
+  color: black;
 }
 .FormField__Input {
   width: 85%;
   background-color: transparent;
   border: none;
-  color: white;
+  color: black;
   outline: none;
   border-bottom: 1px solid #445366;
   font-size: 1em;

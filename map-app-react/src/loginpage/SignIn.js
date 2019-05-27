@@ -44,11 +44,11 @@ class SignInForm extends Component {
     .then(request =>{
       store.set('loggedIn',true);
       store.set('email',request.data.email)
-        if(request.data.role=== 'manager'){
-            this.props.history.push('/admin');
-        }else {
-            this.props.history.push('/home');
-        }
+        // if(request.data.role=== 'manager'){
+        //     this.props.history.push('/admin');
+        // }else {
+            this.props.history.push('/conference');
+        // }
 
     }).catch((error)=>{
       this.setState({
