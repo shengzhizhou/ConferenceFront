@@ -2,6 +2,11 @@ import React from "react";
 import { render } from "react-dom";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/styles";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -25,7 +30,9 @@ const styles = theme => ({
     table: {}
 });
 
+
 export default class schedule extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -48,8 +55,6 @@ export default class schedule extends React.Component {
                     return <TableRow>
                         <TableCell>{event.hostname}</TableCell>
                         <TableCell>{event.title}</TableCell>
-                        <TableCell>{st}</TableCell>
-                        <TableCell>{et}</TableCell>
                         <TableCell>{event.room}</TableCell>
                         <TableCell>{event.track}</TableCell>
 
@@ -100,10 +105,8 @@ export default class schedule extends React.Component {
                 <Table >
                     <TableHead>
                         <TableRow>
-                            <TableCell>Hostname</TableCell>
+                            <TableCell>Speaker</TableCell>
                             <TableCell>Title</TableCell>
-                            <TableCell>Starttime</TableCell>
-                            <TableCell>Endtime</TableCell>
                             <TableCell>Room</TableCell>
                             <TableCell>Track</TableCell>
                         </TableRow>
@@ -112,6 +115,7 @@ export default class schedule extends React.Component {
                         {this.state.events}
                     </TableBody>
                 </Table>
+
             </Paper>
         );
     }

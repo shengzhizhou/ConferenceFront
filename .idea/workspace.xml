@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3097d84a-3148-43f6-9940-f97eac414115" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/CompareInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/DistrictInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/MyRadar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/conference.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/conference.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Speaker.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Speaker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Support.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Support.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Schedule.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Conference.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map-app-react/src/Conference.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2266">
+              <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="182" column="37" selection-start-line="177" selection-start-column="16" selection-end-line="182" selection-end-column="37" />
+            <state relative-caret-position="215">
+              <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -53,8 +59,20 @@
       <file leaf-file-name="About.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map-app-react/src/components/About.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+            <state relative-caret-position="110">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="31" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Support.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Support.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -86,11 +104,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map-app-react/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speaker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Speaker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toggle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Toggle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-173">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -159,7 +198,6 @@
         <option value="$PROJECT_DIR$/map-app-react/src/components/form.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/loginpage/SignIn.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/loginpage/SignUp.js" />
-        <option value="$PROJECT_DIR$/map-app-react/src/components/speaker.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/conference.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/loginpage/Anony.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/components/support.js" />
@@ -173,6 +211,11 @@
         <option value="$PROJECT_DIR$/map-app-react/src/components/Map.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/home.js" />
         <option value="$PROJECT_DIR$/map-app-react/src/App.js" />
+        <option value="$PROJECT_DIR$/map-app-react/src/components/speaker.js" />
+        <option value="$PROJECT_DIR$/map-app-react/src/components/Support.js" />
+        <option value="$PROJECT_DIR$/map-app-react/src/components/About.js" />
+        <option value="$PROJECT_DIR$/map-app-react/src/components/Speaker.js" />
+        <option value="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" />
       </list>
     </option>
   </component>
@@ -191,7 +234,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -329,12 +373,12 @@
       <workItem from="1558745503480" duration="8944000" />
       <workItem from="1558754726147" duration="697000" />
       <workItem from="1558971257628" duration="29131000" />
-      <workItem from="1559021716203" duration="46956000" />
+      <workItem from="1559021716203" duration="50197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92285000" />
+    <option name="totallyTimeSpent" value="95526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -350,7 +394,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.29411766" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29411766" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info id="Designer" order="3" />
@@ -504,13 +548,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/CSE308.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/support.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map-app-react/node_modules/material-table/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-396" />
@@ -530,16 +567,6 @@
           <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/conference.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -578,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Toggle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map-app-react/src/loginpage/SignIn.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -596,16 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/speaker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Schedule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="182" column="37" selection-start-line="177" selection-start-column="16" selection-end-line="182" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map-app-react/src/components/MyRadar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -684,10 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/About.js">
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/Conference.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="40" column="62" selection-start-line="40" selection-start-column="62" selection-end-line="40" selection-end-column="62" />
+        <state relative-caret-position="2266">
+          <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -698,6 +698,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Toggle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Support.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/About.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Speaker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

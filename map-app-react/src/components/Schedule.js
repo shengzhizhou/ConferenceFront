@@ -133,7 +133,7 @@ export default class schedule extends React.Component {
                             color="secondary">
                             Delete
                         </Button>
-                            <Button color="secondary">
+                            <Button color="primary">
                                 Edit
                             </Button>
                         </TableCell>
@@ -173,8 +173,8 @@ export default class schedule extends React.Component {
             );
         }
         return (
-
-            <Paper style={{height:"100%"}}>
+            <div>
+            <Paper >
                 <div><AppBar style={{left:"400px"}}>
                     <Toolbar>
                         <Typography variant="h6">Schedule</Typography>
@@ -198,78 +198,79 @@ export default class schedule extends React.Component {
                     </TableBody>
                 </Table>
                 <br/>
-                <form onSubmit={this.addEvent} className="FormFields">
 
-                        <div>
-                        <TextField
-                        id="title"
-                        label="title"
-                        style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="title"
-                        onChange={this.handleChange}
-                        />
-                        <TextField
-                        id="hostname"
-                        label="hostname"
-                        style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="hostname"
-                        onChange={this.handleChange}
-                        />
-                        <TextField
-                            id="starttimes"
-                            label="starttime"
-                            style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="starttimes"
-                            placeholder="2019-05-29 15:00:00"
-                        onChange={this.handleChange}
-                        />
-                        </div><div>
-                        <TextField
-                            id="endtimes"
-                            label="endtime"
-                            placeholder="2019-05-29 16:00:00"
-                            style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="endtimes"
-                        onChange={this.handleChange}
-                        />
-                        <TextField
-                            id="room"
-                            label="Room"
-                            style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="room"
-                        onChange={this.handleChange}
-                        />
-                        <TextField
-                            id="track"
-                            label="Track"
-                            style={{marginLeft: "8px",
-                        marginRight: "8px",
-                        marginTop: "19",}}
-                        margin="dense"
-                        name="track"
-                        onChange={this.handleChange}
-                        />
-                    </div><br/>
-                        <button className="FormField__Button mr-20" onClick={this.addEvent}>Add New Event</button>
-
-                </form>
 
             </Paper>
+            <form onSubmit={this.addEvent} className="FormFields">
+
+            <div>
+            <TextField
+        id="title"
+        label="title"
+        style={{marginLeft: "8px",
+            marginRight: "8px",
+            marginTop: "19",}}
+        margin="dense"
+        name="title"
+        onChange={this.handleChange}
+        />
+        <TextField
+            id="hostname"
+            label="hostname"
+            style={{marginLeft: "8px",
+                marginRight: "8px",
+                marginTop: "19",}}
+            margin="dense"
+            name="hostname"
+            onChange={this.handleChange}
+        />
+        <TextField
+        id="starttimes"
+        label="starttime"
+        style={{marginLeft: "8px",
+            marginRight: "8px",
+            marginTop: "19",}}
+        margin="dense"
+        name="starttimes"
+        placeholder="2019-05-29 15:00:00"
+        onChange={this.handleChange}
+        />
+    </div><div>
+            <TextField
+                id="endtimes"
+                label="endtime"
+                placeholder="2019-05-29 16:00:00"
+                style={{marginLeft: "8px",
+                    marginRight: "8px",
+                    marginTop: "19",}}
+                margin="dense"
+                name="endtimes"
+                onChange={this.handleChange}
+            />
+            <TextField
+            id="room"
+            label="Room"
+            style={{marginLeft: "8px",
+            marginRight: "8px",
+            marginTop: "19",}}
+            margin="dense"
+            name="room"
+            onChange={this.handleChange}
+            />
+            <TextField
+                id="track"
+                label="Track"
+                style={{marginLeft: "8px",
+                    marginRight: "8px",
+                    marginTop: "19",}}
+                margin="dense"
+                name="track"
+                onChange={this.handleChange}
+            />
+            </div><br/>
+            <button className="FormField__Button mr-20" onClick={this.addEvent}>Add New Event</button>
+
+        </form></div>
         );
     }
 }
