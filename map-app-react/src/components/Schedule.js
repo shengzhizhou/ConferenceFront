@@ -133,9 +133,9 @@ export default class schedule extends React.Component {
                             color="secondary">
                             Delete
                         </Button>
-                            <Button color="primary">
-                                Edit
-                            </Button>
+                            {/*<Button color="primary">*/}
+                                {/*Edit*/}
+                            {/*</Button>*/}
                         </TableCell>
                     </TableRow>
                 })
@@ -269,7 +269,7 @@ export default class schedule extends React.Component {
             />
             </div><br/>
             <button className="FormField__Button mr-20" onClick={this.addEvent}>Add New Event</button>
-
+                <button className="FormField__Button mr-20" onClick={this.addEvent}>Update by Title</button>
         </form></div>
         );
     }

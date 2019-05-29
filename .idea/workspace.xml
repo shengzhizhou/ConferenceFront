@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3097d84a-3148-43f6-9940-f97eac414115" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Speaker.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Speaker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map-app-react/src/components/Support.js" beforeDir="false" afterPath="$PROJECT_DIR$/map-app-react/src/components/Support.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +31,8 @@
       <file leaf-file-name="Schedule.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Schedule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+            <state relative-caret-position="52">
+              <caret line="42" column="22" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -373,12 +369,12 @@
       <workItem from="1558745503480" duration="8944000" />
       <workItem from="1558754726147" duration="697000" />
       <workItem from="1558971257628" duration="29131000" />
-      <workItem from="1559021716203" duration="50197000" />
+      <workItem from="1559021716203" duration="51169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95526000" />
+    <option name="totallyTimeSpent" value="96498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -740,8 +736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map-app-react/src/components/Schedule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="135" column="51" selection-start-line="135" selection-start-column="51" selection-end-line="135" selection-end-column="51" />
+        <state relative-caret-position="52">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
