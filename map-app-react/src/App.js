@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
+import React, {Component} from 'react';
+import {HashRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Map from './components/Map';
@@ -19,12 +19,12 @@ import Anony from './loginpage/Anony'
 
 
 class App extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
-            selectedState :'Select State',
-            compareList : [],
-            email : '',
+        this.state = {
+            selectedState: 'Select State',
+            compareList: [],
+            email: '',
         }
     }
 
@@ -41,7 +41,7 @@ class App extends Component {
     //     })
     // }
 
-    storeEmail(s){
+    storeEmail(s) {
         this.setState({
             email: s
         })
@@ -56,37 +56,26 @@ class App extends Component {
 
                 <div className="App">
 
-                        <div className="App__home">
-                    <Route exact path="/" component={Anony} >
-                    </Route>
+                    <div className="App__home">
+                        <Route exact path="/" component={Anony}>
+                        </Route>
 
-                    <Route exact path="/sign-up" component={SignUp} >
-                    </Route>
-                    <Route path="/sign-in" component={SignIn} storeEmail = {this.storeEmail}>
-                    </Route>
-                            <Route path="/Anony" component={Anony} storeEmail = {this.storeEmail}>
-                            </Route>
+                        <Route exact path="/sign-up" component={SignUp}>
+                        </Route>
 
-                            <Route exact path="/map" component={Map} >
-                            </Route>
-                            <Route exact path="/schedule" component={Schedule}  >
-                            </Route>
-                            <Route exact path="/about" component={About}  >
-                            </Route>
-                            <Route exact path="/speaker" component={speaker}  >
-                            </Route>
-                            <Route exact path="/support" component={support}  >
-                            </Route>
-                        </div>
-                    <div className="App__Form" >
-
+                        <Route exact path="/map" component={Map}>
+                        </Route>
+                        <Route exact path="/schedule" component={Schedule}>
+                        </Route>
+                        <Route exact path="/about" component={About}>
+                        </Route>
+                        <Route exact path="/speaker" component={speaker}>
+                        </Route>
+                        <Route exact path="/support" component={support}>
+                        </Route>
+                    </div>
+                    <div className="App__Form">
                         <Conference/>
-
-                        {/*<Route exact path="/conference" component={Conference}>*/}
-                                {/*/!*render={()=> <Home selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket={this.socket} compareList = {this.state.compareList}/>} >*!/*/}
-                        {/*</Route>*/}
-                        {/*<Route exact path="/admin" component={Admin}>*/}
-                        {/*</Route>*/}
                     </div>
                 </div>
             </Router>

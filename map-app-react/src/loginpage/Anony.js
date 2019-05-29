@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
+import React, {Component} from 'react';
+import {HashRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 import axios from 'axios';
 import Toggle from './Toggle';
 import store from 'store'
@@ -20,15 +20,17 @@ class Anony extends Component {
         this.state = {
             email: '',
             password: '',
-            msg :''
+            msg: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    componentDidMount(){
+
+    componentDidMount() {
 
     }
+
     handleChange(e) {
         let target = e.target;
         let value = target.value;
@@ -42,43 +44,52 @@ class Anony extends Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        let  data=JSON.stringify({//×ªJSON ¸ñÊ½
-            "password":e.target.elements.password.value
+        let data = JSON.stringify({//×ªJSON ¸ñÊ½
+            "password": e.target.elements.password.value
         })
-        let temp=e.target.elements.password.value.toString();
+        let temp = e.target.elements.password.value.toString();
         // console.log(e.target.elements.password.value.toString())
-        if(temp=="cewitconf2018"){
+        if (temp == "cewitconf2018") {
             console.log("true")
             // store.set('loggedIn',true);
-            store.set('AnonyLogin',true);
-            store.set('email',"Anonymous")
-            store.set('name',"Anonymous")
-            store.set('phonenum',"Anonymous")
+            store.set('AnonyLogin', true);
+            store.set('email', "Anonymous")
+            store.set('name', "Anonymous")
+            store.set('phonenum', "Anonymous")
             this.props.history.push('/');
+            this.setState({
+                password: '',
+                msg: ''
+            })
         }
-
+        else if (!store.get("AnonyLogin")) {
+            this.setState({
+                msg: 'Invalid User or Password'
+            })
+        }
         else {
-            let  data=JSON.stringify({//×ªJSON ¸ñÊ½
-                "email":e.target.elements.email.value,
-                "password":e.target.elements.password.value
+
+            let data = JSON.stringify({//×ªJSON ¸ñÊ½
+                "email": e.target.elements.email.value,
+                "password": e.target.elements.password.value
             })
             axios.post('http://localhost:8080/homepage/signin',
-                data,{
-                    headers:{ 'Content-Type': 'application/json;charset=UTF-8'}
+                data, {
+                    headers: {'Content-Type': 'application/json;charset=UTF-8'}
                 })
-                .then(request =>{
-                    store.set('loggedIn',true);
-                    store.set('AnonyLogin',false);
-                    store.set('email',request.data.email)
-                    store.set('name',request.data.name)
-                    store.set('phonenum',request.data.phonenum)
+                .then(request => {
+                    store.set('loggedIn', true);
+                    store.set('AnonyLogin', false);
+                    store.set('email', request.data.email)
+                    store.set('name', request.data.name)
+                    store.set('phonenum', request.data.phonenum)
                     // if(request.data.role=== 'manager'){
                     //     this.props.history.push('/admin');
                     // }else {
                     this.props.history.push('/schedule');
                     // }
 
-                }).catch((error)=>{
+                }).catch((error) => {
                 this.setState({
                     msg: 'Invalid User or Password'
                 })
@@ -88,32 +99,37 @@ class Anony extends Component {
     }
 
     render() {
-        if(store.get("AnonyLogin")){
+        if (store.get("AnonyLogin")) {
             return (
                 <div>
-                    <div><AppBar style={{left:"400px"}}>
+                    <div><AppBar style={{left: "400px"}}>
                         <Toolbar>
                             <Typography variant="h6">Sign In</Typography>
                         </Toolbar>
                     </AppBar>
                     </div>
-                    <div className="FormCenter" >
+                    <div className="FormCenter">
                         <Toggle/>
                         <div>
-                            <div style={{color :'red'}}>{this.state.msg}</div>
+                            <div style={{color: 'red'}}>{this.state.msg}</div>
                             <form onSubmit={this.handleSubmit} className="FormFields">
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                                    <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+                                    <input type="email" id="email" className="FormField__Input"
+                                           placeholder="Enter your email" name="email" value={this.state.email}
+                                           onChange={this.handleChange}/>
                                 </div>
 
                                 <div className="FormField">
                                     <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
+                                    <input type="password" id="password" className="FormField__Input"
+                                           placeholder="Enter your password" name="password" value={this.state.password}
+                                           onChange={this.handleChange}/>
                                 </div>
 
                                 <div className="FormField">
-                                    <button className="FormField__Button mr-20">Sign In</button> <Link to="/sign-up" className="FormField__Link">Create an account</Link>
+                                    <button className="FormField__Button mr-20">Sign In</button>
+                                    <Link to="/sign-up" className="FormField__Link">Create an account</Link>
                                 </div>
                             </form>
                         </div>
@@ -122,18 +138,18 @@ class Anony extends Component {
             );
         }
 
-        else{
-            if(store.get("email")!=null){
+        else {
+            if (store.get("email") != null) {
                 return (
                     <div>
-                        <div><AppBar style={{left:"400px"}}>
+                        <div><AppBar style={{left: "400px"}}>
                             <Toolbar>
                                 <Typography variant="h6">Account Info</Typography>
                             </Toolbar>
                         </AppBar>
                         </div>
                         <br/><br/><br/>
-                        <Table >
+                        <Table>
                             <TableHead>
                                 <TableRow>
                                     <TableCell align="left">User Name</TableCell>
@@ -156,32 +172,35 @@ class Anony extends Component {
                 );
             }
             else
-            return (
-                <div>
-                    <div><AppBar style={{left:"400px"}}>
-                        <Toolbar>
-                            <Typography variant="h6">Anonymous Sign In</Typography>
-                        </Toolbar>
-                    </AppBar>
-                    </div>
-                    <div className="FormCenter" >
-                        <Toggle/>
-                        <div>
-                            <div style={{color :'red'}}>{this.state.msg}</div>
-                            <form onSubmit={this.handleSubmit} className="FormFields">
-                                <div className="FormField">
-                                    <label className="FormField__Label" htmlFor="password">Password</label>
-                                    <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-                                </div>
+                return (
+                    <div>
+                        <div><AppBar style={{left: "400px"}}>
+                            <Toolbar>
+                                <Typography variant="h6">Anonymous Sign In</Typography>
+                            </Toolbar>
+                        </AppBar>
+                        </div>
+                        <div className="FormCenter">
+                            <Toggle/>
+                            <div>
+                                <div style={{color: 'red'}}>{this.state.msg}</div>
+                                <form onSubmit={this.handleSubmit} className="FormFields">
+                                    <div className="FormField">
+                                        <label className="FormField__Label" htmlFor="password">Password</label>
+                                        <input type="password" id="password" className="FormField__Input"
+                                               placeholder="Enter your password" name="password"
+                                               value={this.state.password} onChange={this.handleChange}/>
+                                    </div>
 
-                                <div className="FormField">
-                                     <button className="FormField__Button mr-20">Login As Anonymous</button>
-                                </div>
-                            </form>
+                                    <div className="FormField">
+                                        <button className="FormField__Button mr-20">Login As Anonymous</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            );}
+                );
+        }
     }
 }
 

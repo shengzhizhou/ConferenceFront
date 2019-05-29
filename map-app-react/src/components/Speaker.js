@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
+import {render} from "react-dom";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/styles";
+import {withStyles} from "@material-ui/styles";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -37,21 +37,22 @@ export default class schedule extends React.Component {
         super(props);
         this.state = {
             events: null,
-            newEvent:null
+            newEvent: null
         };
 
     }
-    getAllEvent(){
+
+    getAllEvent() {
 
         let eventList = [];
         axios.post('http://localhost:8080/homepage/loadAllEvent')
-            .then(request =>{
+            .then(request => {
 
                 eventList = request.data.map((event) => {
                     // console.log(user.email)
-                    let starttime=event.starttime
-                    let st=dateformat(starttime, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
-                    let et=dateformat(event.endtime, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
+                    let starttime = event.starttime
+                    let st = dateformat(starttime, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
+                    let et = dateformat(event.endtime, 'dddd, mmmm dS, yyyy, h:MM:ss TT');
                     return <TableRow>
                         <TableCell>{event.hostname}</TableCell>
                         <TableCell>{event.title}</TableCell>
@@ -62,33 +63,35 @@ export default class schedule extends React.Component {
                 })
                 // eventList.concat(this.state.newEvent)
                 this.setState({
-                    events : eventList
+                    events: eventList
                 });
-            }).catch((error)=>{
+            }).catch((error) => {
             this.setState({
                 msg: 'Invalid User or Password'
             })
         })
     }
-    componentDidMount(){
+
+    componentDidMount() {
         this.getAllEvent()
 
     }
 
     render() {
-        const { classes } = this.props;
+        const {classes} = this.props;
 
-        if(store.get("email")==null){
+        if (store.get("email") == null) {
             return (
                 <div>
-                    <div><AppBar style={{left:"400px"}}>
+                    <div><AppBar style={{left: "400px"}}>
                         <Toolbar>
                             <Typography variant="h6">Speaker</Typography>
                         </Toolbar>
                     </AppBar>
-                    </div><br/><br/><br/>
+                    </div>
+                    <br/><br/><br/>
 
-                    <Typography style={{left:"0px"}} variant="h5" component="h2">Please Login first</Typography>
+                    <Typography style={{left: "0px"}} variant="h5" component="h2">Please Login first</Typography>
                 </div>
 
             );
@@ -96,13 +99,14 @@ export default class schedule extends React.Component {
         return (
 
             <Paper>
-                <div><AppBar style={{left:"400px"}}>
+                <div><AppBar style={{left: "400px"}}>
                     <Toolbar>
                         <Typography variant="h6">Speaker</Typography>
                     </Toolbar>
                 </AppBar>
-                </div><br/><br/><br/>
-                <Table >
+                </div>
+                <br/><br/><br/>
+                <Table>
                     <TableHead>
                         <TableRow>
                             <TableCell>Speaker</TableCell>
