@@ -34,12 +34,6 @@ export default class schedule extends React.Component {
         };
 
     }
-
-
-
-
-
-
     getAllEvent(){
 
         let eventList = [];

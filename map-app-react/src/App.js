@@ -6,14 +6,12 @@ import Map from './components/Map';
 import SignUp from './loginpage/SignUp';
 import SignIn from './loginpage/SignIn';
 import Toggle from './loginpage/Toggle';
-import Home from './home';
-import Conference from './conference';
-import Schedule from './components/schedule';
-import About from './components/about';
-import speaker from './components/speaker';
-import Admin from './components/Admin'
+import Conference from './Conference';
+import Schedule from './components/Schedule';
+import About from './components/About';
+import speaker from './components/Speaker';
 import io from "socket.io-client";
-import support from './components/support';
+import support from './components/Support';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -28,12 +26,6 @@ class App extends Component {
             compareList : [],
             email : '',
         }
-        // this.setSelectedState = this.setSelectedState.bind(this)
-        // this.updateCompare = this.updateCompare.bind(this)
-        this.socket = io('http://localhost:9093');
-        this.socket.on('connect',()=>{
-            console.log("success")
-        })
     }
 
 

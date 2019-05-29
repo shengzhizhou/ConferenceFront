@@ -9,24 +9,39 @@ export default class about extends React.Component {
         super(props);
         this.state = {
             columns: [
-                { title: 'Name', field: 'name' },
-                { title: 'Surname', field: 'surname' },
-                { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-                {
-                    title: 'Birth Place',
-                    field: 'birthCity',
-                    lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
-                },
+                { title: 'Title', field: 'title' },
+                { title: 'Hostname', field: 'hostname' },
+                { title: 'Starttime', field: 'starttime',  },
+                { title: 'Endtime', field: 'endtime',  },
+                { title: 'Room', field: 'room',  },
+                { title: 'Track', field: 'track',  },
             ],
             data: [
-                { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-                { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+                {title:'How the Heart Works with Jamie and Jackie Lakes',
+                    hostname:'Jamie,Jackie',
+                    starttime:'Wednesday, May 29th, 2019, 12:00:00 PM',
+                    endtime:'Wednesday, May 29th, 2019, 1:00:00 PM',
+                    room:'RM 200',
+                    track:'Healthcare'},
+                {title:'Intro to Cryptography with John McAfee',
+                    hostname:'John McAfee',
+                    starttime:'Wednesday, May 29th, 2019, 2:00:00 PM',
+                    endtime:'Wednesday, May 29th, 2019, 3:00:00 PM',
+                    room:'Main Hall',
+                    track:'Security'},
             ]
         }
     }
 
     render() {
         return (
+            <div>
+                <div><AppBar style={{left:"400px"}}>
+                    <Toolbar>
+                        <Typography variant="h6">Fake Schedule</Typography>
+                    </Toolbar>
+                </AppBar>
+                </div><br/><br/><br/>
             <MaterialTable
                 title="Editable Preview"
                 columns={this.state.columns}
@@ -68,7 +83,7 @@ export default class about extends React.Component {
                             }, 1000)
                         }),
                 }}
-            />
+            /></div>
         )
     }
 }

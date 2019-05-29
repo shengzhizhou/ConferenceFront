@@ -21,7 +21,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Account from '@material-ui/icons/AccountBox';
 import Support from '@material-ui/icons/Help';
 import Logout from '@material-ui/icons/PowerSettingsNew';
-import Schedule from './components/schedule';
+import Schedule from './components/Schedule';
 import Typography from '@material-ui/core/Typography';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';

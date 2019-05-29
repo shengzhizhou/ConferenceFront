@@ -12,10 +12,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Container, Row, Col }  from "react-bootstrap";
-import MyRadar from "./MyRadar";
 import axios from "axios";
 import Dropdown from "react-bootstrap/Dropdown";
-import DistrictInfo from "./DistrictInfo";
 import store from "store";
 
 // const Wrapper = styled.div`
