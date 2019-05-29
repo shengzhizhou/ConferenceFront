@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 import Toggle from './Toggle';
 import axios from 'axios';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import store from "store";
 
 class SignUpForm extends Component {
     constructor() {
@@ -11,6 +15,7 @@ class SignUpForm extends Component {
             email: '',
             password: '',
             name: '',
+            phonenum:'',
             hasAgreed: false,
             msg : ''
         };
@@ -43,6 +48,7 @@ class SignUpForm extends Component {
           "email":e.target.elements.email.value,
           "password":e.target.elements.password.value,
           "name":e.target.elements.name.value,
+            "phonenum":e.target.elements.phonenum.value,
             "role": 'user'
         })
         axios.post('http://localhost:8080/homepage/signup',
@@ -52,8 +58,12 @@ class SignUpForm extends Component {
         })
         .then(request =>{
             this.setState({login: !this.state.login});
-                    this.props.history.push('/home');
-
+            store.set('loggedIn',true);
+            store.set('AnonyLogin',false);
+            store.set('email',request.data.email)
+            store.set('name',request.data.name)
+            store.set('phonenum',request.data.phonenum)
+                    this.props.history.push('/schedule');
         }).catch(error=>{
             this.setState({
                 msg: 'User already exist.'
@@ -66,6 +76,13 @@ class SignUpForm extends Component {
 
     render() {
         return (
+            <div>
+                <div><AppBar style={{left:"400px"}}>
+                    <Toolbar>
+                        <Typography variant="h6">Sign Up</Typography>
+                    </Toolbar>
+                </AppBar>
+                </div>
         <div className="FormCenter" >
               <Toggle/>
             <div style={{color :'red'}}>{this.state.msg}</div>
@@ -82,7 +99,10 @@ class SignUpForm extends Component {
                 <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
                 <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
               </div>
-
+                <div className="FormField">
+                    <label className="FormField__Label" htmlFor="phonenum">Phone Number</label>
+                    <input type="phonenum" id="phonenum" className="FormField__Input" placeholder="Enter your phone number" name="phonenum" value={this.state.phonenum} onChange={this.handleChange} />
+                </div>
               <div className="FormField">
                 <label className="FormField__CheckboxLabel">
                     <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in terms of service
@@ -90,10 +110,11 @@ class SignUpForm extends Component {
               </div>
 
               <div className="FormField">
-                  <button className="FormField__Button mr-20">Sign Up</button> <Link to="/sign-in" className="FormField__Link">I'm already member</Link>
+                  <button className="FormField__Button mr-20">Sign Up</button> <Link to="/" className="FormField__Link">I'm already member</Link>
               </div>
             </form>
           </div>
+            </div>
         );
     }
 }

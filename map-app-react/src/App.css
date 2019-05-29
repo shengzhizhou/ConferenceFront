@@ -38,10 +38,20 @@
   padding: 30px 20px;
   position: absolute;
   left: 0px;
+  border-right: 1px solid darkblue;
   /*top: 0px;*/
   /*opacity:0.8;*/
   overflow:auto;
   /*box-shadow:0px 0px 10px 5px rgb(255, 255, 179);*/
+}
+.App__home{
+  height:100%;
+  left:400px;
+  width:calc(100% - 400px);
+  position:absolute;
+zIndex: 0;
+
+color:black
 }
 
 /* .PageSwitcher {
@@ -146,7 +156,7 @@
   color: #66707D;
   text-decoration: none;
   display: inline-block;
-  border-bottom: 1.5px solid #225E62;
+  /*border-bottom: 1.5px solid #225E62;*/
   padding-bottom: 5px;
 }
 

@@ -5,13 +5,19 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Map from './components/Map';
 import SignUp from './loginpage/SignUp';
 import SignIn from './loginpage/SignIn';
-import Guest from './loginpage/Guest';
 import Toggle from './loginpage/Toggle';
 import Home from './home';
 import Conference from './conference';
 import Schedule from './components/schedule';
+import About from './components/about';
+import speaker from './components/speaker';
 import Admin from './components/Admin'
 import io from "socket.io-client";
+import support from './components/support';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Anony from './loginpage/Anony'
 
 
 class App extends Component {
@@ -22,8 +28,8 @@ class App extends Component {
             compareList : [],
             email : '',
         }
-        this.setSelectedState = this.setSelectedState.bind(this)
-        this.updateCompare = this.updateCompare.bind(this)
+        // this.setSelectedState = this.setSelectedState.bind(this)
+        // this.updateCompare = this.updateCompare.bind(this)
         this.socket = io('http://localhost:9093');
         this.socket.on('connect',()=>{
             console.log("success")
@@ -31,17 +37,17 @@ class App extends Component {
     }
 
 
-    setSelectedState(s){
-        this.setState({
-            selectedState : s
-        })
-    }
-
-    updateCompare(l){
-        this.setState({
-            compareList : l
-        })
-    }
+    // setSelectedState(s){
+    //     this.setState({
+    //         selectedState : s
+    //     })
+    // }
+    //
+    // updateCompare(l){
+    //     this.setState({
+    //         compareList : l
+    //     })
+    // }
 
     storeEmail(s){
         this.setState({
@@ -52,27 +58,41 @@ class App extends Component {
 
     render() {
         return (
+
             <Router basename="/">
+
+
                 <div className="App">
 
-                    <Map selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket = {this.socket} updateCompare ={this.updateCompare} compareList ={this.state.compareList} email ={this.state.email}/>
-                    <Route exact path="/Schedule" component={Schedule} >
-                        </Route>
+                        <div className="App__home">
+                    <Route exact path="/" component={Anony} >
+                    </Route>
 
+                    <Route exact path="/sign-up" component={SignUp} >
+                    </Route>
+                    <Route path="/sign-in" component={SignIn} storeEmail = {this.storeEmail}>
+                    </Route>
+                            <Route path="/Anony" component={Anony} storeEmail = {this.storeEmail}>
+                            </Route>
+
+                            <Route exact path="/map" component={Map} >
+                            </Route>
+                            <Route exact path="/schedule" component={Schedule}  >
+                            </Route>
+                            <Route exact path="/about" component={About}  >
+                            </Route>
+                            <Route exact path="/speaker" component={speaker}  >
+                            </Route>
+                            <Route exact path="/support" component={support}  >
+                            </Route>
+                        </div>
                     <div className="App__Form" >
 
-                        <Route exact path="/" component={SignIn} >
-                        </Route>
+                        <Conference/>
 
-                        <Route exact path="/sign-up" component={SignUp} >
-                        </Route>
-                        <Route path="/sign-in" component={SignIn} storeEmail = {this.storeEmail}>
-                        </Route>
-                        <Route exact path="/Guest" render ={()=><Guest selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState}/>}>
-                        </Route>
-                        <Route exact path="/conference" component={Conference}>
-                                {/*render={()=> <Home selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket={this.socket} compareList = {this.state.compareList}/>} >*/}
-                        </Route>
+                        {/*<Route exact path="/conference" component={Conference}>*/}
+                                {/*/!*render={()=> <Home selectedState = {this.state.selectedState} setSelectedState = {this.setSelectedState} socket={this.socket} compareList = {this.state.compareList}/>} >*!/*/}
+                        {/*</Route>*/}
                         {/*<Route exact path="/admin" component={Admin}>*/}
                         {/*</Route>*/}
                     </div>
